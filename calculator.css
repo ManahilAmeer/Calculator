@@ -2,13 +2,36 @@
     box-sizing: border-box;
     font-weight: normal;
     font-size: large;
- 
 }
+
 button{
     width:60px ;
     height: 50px;
     margin: 3px;
     background: #efefee;
+}
+.operator:hover{
+    background-color: #ffe282;
+}
+.number:hover{
+    background-color: #cfcfcf;
+}
+.C:hover{
+    background-color: #d8828c;
+}
+button::after{
+    right: -20px;
+    transition: .5s;
+}
+button:hover{
+   
+    height: 45px;
+    width: 55px;
+    right: 0;
+}
+button:active{
+    box-shadow: 0px 3px 5px rgb(82, 81, 81);
+   
 }
 input{
     width:270px ;
@@ -16,7 +39,6 @@ input{
     margin: 6px;
 }
 .number{
-   
     border: none;
     box-shadow: 0px 3px 3px grey;
 }
@@ -35,6 +57,7 @@ input{
     box-shadow: 0px 3px 5px grey;
     border: none;
     padding: 15px;
+    overflow: auto;
 }
 .container{
     text-align: center;

@@ -6,6 +6,13 @@ function display(value){
 }
 function compute(){
     var demo=document.getElementById('result').value;
-    var res=eval(demo);
-    document.getElementById('result').value=res;
+    
+    try{
+        var res = eval(demo);
+    }
+    catch(e){
+        // document.getElementById("result").style.backgroundColor='red';
+        res = "You have entered invalid expression!!";
+    }
+    document.getElementById("result").value = res;
 }

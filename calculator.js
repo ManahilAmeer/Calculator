@@ -12,7 +12,7 @@ function compute(){
     }
     catch(e){
         // document.getElementById("result").style.backgroundColor='red';
-        res = "You have entered invalid expression!!";
+        res = "Invalid Expression!!";
     }
     document.getElementById("result").value = res;
 }

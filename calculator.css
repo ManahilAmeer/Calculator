@@ -1,23 +1,25 @@
+/* General Styling */
 *{
     box-sizing: border-box;
     font-weight: normal;
     font-size: large;
 }
-
+/* Style for output Screen */
+input{
+    width:270px ;
+    height: 60px;
+    margin: 6px;
+    background-color: #f2fbec;
+    box-shadow: 0px 3px 5px grey;
+    border: none;
+    padding: 15px;
+}
+/* Style for buttons */
 button{
     width:60px ;
     height: 50px;
     margin: 3px;
     background: #efefee;
-}
-.operator:hover{
-    background-color: #ffe282;
-}
-.number:hover{
-    background-color: #cfcfcf;
-}
-.C:hover{
-    background-color: #d8828c;
 }
 button::after{
     right: -20px;
@@ -33,10 +35,15 @@ button:active{
     box-shadow: 0px 3px 5px rgb(82, 81, 81);
    
 }
-input{
-    width:270px ;
-    height: 60px;
-    margin: 6px;
+/* Style for specific buttons */
+.operator:hover{
+    background-color: #ffe282;
+}
+.number:hover{
+    background-color: #cfcfcf;
+}
+.C:hover{
+    background-color: #d8828c;
 }
 .number{
     border: none;
@@ -52,17 +59,8 @@ input{
     box-shadow: 0px 3px 5px grey;
     border: none;
 }
-#result{
-    background-color: #f2fbec;
-    box-shadow: 0px 3px 5px grey;
-    border: none;
-    padding: 15px;
-    overflow: auto;
-}
-.container{
-    text-align: center;
-    margin-top:23px;
-}
+
+/* Style for calculator background */
 .cal-grid{ 
     border: 8px solid #acbc87;
     background-color: #accde3;

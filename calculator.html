@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Task</title>
-    <link rel="stylesheet" href="calculator.css">
-    <script src="calculator.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="calculator.css" />
+    
+  </head>
+  <body>
     <div class="cal-grid">
-        <!-- Screen -->
-        <input type="text" name="result" id="result" readonly>
-        <!-- Keypad -->
-        <table>
-            <tr>
-                <td><button class="number" onclick="display(1)">1</button></td>
-                <td><button class="number" onclick="display(2)">2</button></td>
-                <td><button class="number" onclick="display(3)">3</button></td>
-                <td><button class="operator" onclick="display('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button class="number" onclick="display(4)">4</button></td>
-                <td><button class="number" onclick="display(5)">5</button></td>
-                <td><button class="number" onclick="display(6)">6</button></td>
-                <td><button class="operator" onclick="display('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button class="number" onclick="display(7)">7</button></td>
-                <td><button class="number" onclick="display(8)">8</button></td>
-                <td><button class="number" onclick="display(9)">9</button></td>
-                <td><button class="operator" onclick="display('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button class="C" onclick="Clear()">C</button></td>
-                <td><button class="number" onclick="display(0)">0</button></td>
-                <td><button class="number" onclick="compute()">=</button></td>
-                <td><button class="operator" onclick="display('/')">/</button></td>
-            </tr>
-        </table>
-            </div>
-</body>
+      <!-- Screen -->
+      <input type="text" name="output-screen" id="output-screen" readonly />
+      <!-- Keypad -->
+      <table>
+        <tr>
+          <td><button class="number" onclick="display(1)">1</button></td>
+          <td><button class="number" onclick="display(2)">2</button></td>
+          <td><button class="number" onclick="display(3)">3</button></td>
+          <td><button class="operator" onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button class="number" onclick="display(4)">4</button></td>
+          <td><button class="number" onclick="display(5)">5</button></td>
+          <td><button class="number" onclick="display(6)">6</button></td>
+          <td><button class="operator" onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button class="number" onclick="display(7)">7</button></td>
+          <td><button class="number" onclick="display(8)">8</button></td>
+          <td><button class="number" onclick="display(9)">9</button></td>
+          <td><button class="operator" onclick="display('*')">*</button></td>
+        </tr>
+        <tr>
+          <td><button class="C" onclick="clearScreen()">C</button></td>
+          <td><button class="number" onclick="display(0)">0</button></td>
+          <td><button class="number" onclick="compute()">=</button></td>
+          <td><button class="operator" onclick="display('/')">/</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
 </html>

@@ -1,20 +1,38 @@
-// Function to clear the screen
-function Clear(){
-    document.getElementById('result').value="";
+function clearScreen() {
+  document.getElementById("output-screen").value = "";
 }
-// Function to display the given value on screen 
-function display(value){
-    document.getElementById('result').value+=value;
+
+function display(value) {
+  document.getElementById("output-screen").value += value;
 }
-// Function to Compute the written expression 
-function compute(){
-    var demo=document.getElementById('result').value;
-    // Error handling
-    try{
-        var res = eval(demo);
-    }
-    catch(e){
-        res = "Invalid Expression!!";
-    }
-    document.getElementById("result").value = res;
+
+function compute() {
+  const input = document.getElementById("output-screen").value;
+  let output;
+  if(input==""){
+      output="Enter something";
+      setTimeout(function () {
+        clearScreen();
+      }, 500);
+  }
+  else{
+  try {
+    output = eval(input);
+    setTimeout(function () {
+      clearScreen();
+    }, 500);
+  } catch (e) {
+    output = "Invalid Expression!";
+    setTimeout(function(){
+        clearScreen();
+    },500);
+  }}
+  document.getElementById("output-screen").value = output;
 }
+
+document.onkeydown = function (ev) {
+  if (ev.key == "Enter") {
+    ev.preventDefault();
+    compute();
+  }
+};

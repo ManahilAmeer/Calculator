@@ -1,72 +1,75 @@
-/* General Styling */
-*{
-    box-sizing: border-box;
-    font-weight: normal;
-    font-size: large;
-}
-/* Style for output Screen */
-input{
-    width:270px ;
-    height: 60px;
-    margin: 6px;
-    background-color: #f2fbec;
-    box-shadow: 0px 3px 5px grey;
-    border: none;
-    padding: 15px;
-}
-/* Style for buttons */
-button{
-    width:60px ;
-    height: 50px;
-    margin: 3px;
-    background: #efefee;
-}
-button::after{
-    right: -20px;
-    transition: .5s;
-}
-button:hover{
-   
-    height: 45px;
-    width: 55px;
-    right: 0;
-}
-button:active{
-    box-shadow: 0px 3px 5px rgb(82, 81, 81);
-   
-}
-/* Style for specific buttons */
-.operator:hover{
-    background-color: #ffe282;
-}
-.number:hover{
-    background-color: #cfcfcf;
-}
-.C:hover{
-    background-color: #d8828c;
-}
-.number{
-    border: none;
-    box-shadow: 0px 3px 3px grey;
-}
-.operator{
-    background-color: #f1faa2;
-    border: none;
-    box-shadow: 0px 3px 5px grey;
-}
-.C{
-    background-color: #e3a8b0;
-    box-shadow: 0px 3px 5px grey;
-    border: none;
+* {
+  box-sizing: border-box;
+  font-weight: normal;
 }
 
-/* Style for calculator background */
-.cal-grid{ 
-    border: 8px solid #acbc87;
-    background-color: #accde3;
-    padding: 23px;
-    display: inline-block;
-    margin: 50px;
-    
+input {
+  width: 19.7vw;
+  height: 4.3vw;
+  margin: 0.43vw;
+  background-color: #f2fbec;
+  box-shadow: 0vw 0.211vw 0.36vw grey;
+  border: none;
+  padding: 1.09vw;
+  margin-bottom: 1.3vw;
 }
 
+button {
+  width: 4.3vw;
+  height: 3.6vw;
+  margin: 0.211vw;
+  background: #efefee;
+}
+button::after {
+  right: -1.46vw;
+  transition: 0.5s;
+}
+button:active {
+  box-shadow: 0vw 0.211vw 0.36vw rgb(71, 3, 3);
+}
+
+.operator:hover {
+  background-color: #fcd863;
+}
+.number:hover {
+  background-color: #a7a5a5;
+}
+.C:hover {
+  background-color: #dd737f;
+}
+.number {
+  border: none;
+  box-shadow: 0vw 0.211vw 0.211vw grey;
+}
+.operator {
+  background-color: #f1faa2;
+  border: none;
+  box-shadow: 0vw 0.211vw 0.36vw grey;
+}
+.C {
+  background-color: #e3a8b0;
+  box-shadow: 0vw 0.211vw 0.36vw grey;
+  border: none;
+}
+
+.cal-grid {
+  border: 0.39vw solid #acbc87;
+  background-color: #accde3;
+  padding: 0.3vw;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 2.1vw;
+  }
+}
+@media only screen and (min-width: 601px) {
+  * {
+    font-size: 1.5vw;
+  }
+}

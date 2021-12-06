@@ -11,8 +11,14 @@ class Calculator extends React.Component {
       userInput: "",
     };
   }
+  componentDidMount() {
+    document.addEventListener("keydown", this.keyDown);
+    const buttons = document.querySelectorAll("button");
+    this.handleButtons(buttons);
+    document.title="Calculator App"
+  }
   keyDown = (ev) => {
-        ev.preventDefault();
+    ev.preventDefault();
     if (ev.key >= "0" && ev.key <= "9") {
       this.display(ev.key);
     }
@@ -80,11 +86,7 @@ class Calculator extends React.Component {
       });
     }
   }
-  componentDidMount() {
-    document.addEventListener("keydown", this.keyDown);
-    const buttons = document.querySelectorAll("button");
-    this.handleButtons(buttons);
-  }
+
   render() {
     return (
       <>

@@ -30,7 +30,7 @@ input {
 button {
   width: 4.3vw;
   height: 3.6vw;
-  margin: 0.211vw;
+  margin: 0.331vw;
   background: #efefee;
 }
 button::after {

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import Keyboard from "./Keyboard";
 import reportWebVitals from "./reportWebVitals";
 
 class Calculator extends React.Component {
@@ -15,7 +16,7 @@ class Calculator extends React.Component {
     document.addEventListener("keydown", this.keyDown);
     const buttons = document.querySelectorAll("button");
     this.handleButtons(buttons);
-    document.title="Calculator App"
+    document.title = "Calculator App";
   }
   keyDown = (ev) => {
     ev.preventDefault();
@@ -98,64 +99,7 @@ class Calculator extends React.Component {
             value={this.state.ans}
             disabled
           />
-          <table>
-            <tr>
-              <td>
-                <button class="number">1</button>
-              </td>
-              <td>
-                <button class="number">2</button>
-              </td>
-              <td>
-                <button class="number">3</button>
-              </td>
-              <td>
-                <button class="operator">+</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button class="number">4</button>
-              </td>
-              <td>
-                <button class="number">5</button>
-              </td>
-              <td>
-                <button class="number">6</button>
-              </td>
-              <td>
-                <button class="operator">-</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button class="number">7</button>
-              </td>
-              <td>
-                <button class="number">8</button>
-              </td>
-              <td>
-                <button class="number">9</button>
-              </td>
-              <td>
-                <button class="operator">*</button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button class="C">C</button>
-              </td>
-              <td>
-                <button class="number">0</button>
-              </td>
-              <td>
-                <button class="number">=</button>
-              </td>
-              <td>
-                <button class="operator">/</button>
-              </td>
-            </tr>
-          </table>
+          <Keyboard></Keyboard>
         </div>
       </>
     );

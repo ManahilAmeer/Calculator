@@ -12,6 +12,7 @@ class Calculator extends React.Component {
     };
   }
   keyDown = (ev) => {
+        ev.preventDefault();
     if (ev.key >= "0" && ev.key <= "9") {
       this.display(ev.key);
     }

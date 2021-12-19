@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Keyboard from "./Keyboard";
 import reportWebVitals from "./reportWebVitals";
-
+import App from "./App";
+import store from "./store"
+import { Provider } from "react-redux";
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
@@ -107,7 +109,9 @@ class Calculator extends React.Component {
 }
 ReactDOM.render(
   <React.StrictMode>
-    <Calculator />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

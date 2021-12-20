@@ -1,10 +1,16 @@
-.RecentTable{
+.RecentTable {
   border: 0.3vw solid #a570f0;
   background-color: white;
   color: black;
   margin-left: 4vw;
   max-width: 75%;
   text-align: center;
+}
+.item {
+  /* background-color:#a570f0; */
+  color: brown;
+  margin-left: 4vw;
+  text-align:justify;
 }
 th {
   background-color: white;

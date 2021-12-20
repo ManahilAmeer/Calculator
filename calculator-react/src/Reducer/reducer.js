@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = "";
-const previous =[];
+let previous =[];
 const CalculatoReducer = createSlice({
   name: "calculator",
   initialState,
@@ -21,14 +21,19 @@ const CalculatoReducer = createSlice({
       } else {
         try {
           output = eval(state);
+          let prev = { output, state };
+          // state = output;
+          // previous=Object.assign([],previous);
+          previous.push(prev);
         } catch (e) {
-          output = "Invalid Expression!";
+          output = "Math Error";
           CalculatoReducer.caseReducers.clearScreen();
         }
       }
-      let prev = { output,state };
+      // let prev = { output,state };
       state = output;
-      previous.push(prev);
+      // // previous=Object.assign([],previous);
+      // previous.push(prev);
       console.log("previous: ", previous);
       return state ;
     },
@@ -36,12 +41,12 @@ const CalculatoReducer = createSlice({
       state = "";
       return state;
     },
-    ViewRecent:(state)=>{
-      // state=previous;
-      console.log(state);
-      return previous;
-    }
+    // ViewRecent:()=>{
+    //   return previous;
+    // }
   },
 });
+
+export let pre=previous;
 export const { display, compute, clearScreen, ViewRecent } = CalculatoReducer.actions;
 export const reducer = CalculatoReducer.reducer;

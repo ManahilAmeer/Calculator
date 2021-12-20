@@ -5,11 +5,7 @@ import { display, compute, clearScreen } from "../Reducer/reducer";
 import { Link, Outlet } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/index.css";
-import {
-  Nav,
-  Navbar,
-  Container,
-} from "react-bootstrap";
+import MyNavbar from "./Navbar";
 const mapStateToProps = (state) => {
   return {
     answer: state,
@@ -24,10 +20,14 @@ const mapDispatchToProps = (dispatch) => {
 };
 const App = (props) => {
   useEffect(() => {
+    document.addEventListener("keydown", _keyDown);
     fetch();
+    return () => {
+      // unsubscribe event
+      document.removeEventListener("keydown", _keyDown);
+    };
   }, []);
   const fetch = () => {
-    // document.addEventListener("keydown", _keyDown);
     const buttons = document.querySelectorAll("button");
     handleButtons(buttons);
     document.title = "Calculator App";
@@ -73,20 +73,7 @@ const App = (props) => {
   };
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Link to="/recents">Invoices</Link> <span></span>
-              <Link to="/expenses">Expenses</Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
+      <MyNavbar></MyNavbar>
       <div className="cal-grid">
         <input
           type="text"

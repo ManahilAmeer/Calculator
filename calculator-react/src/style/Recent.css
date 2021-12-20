@@ -1,0 +1,12 @@
+.RecentTable{
+  border: 0.3vw solid #a570f0;
+  background-color: white;
+  color: black;
+  margin-left: 4vw;
+  max-width: 75%;
+  text-align: center;
+}
+th {
+  background-color: white;
+  padding: 1vw;
+}

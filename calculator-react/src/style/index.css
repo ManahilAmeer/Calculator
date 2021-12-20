@@ -11,16 +11,15 @@ code {
     monospace;
 }
 input {
-  width: 85%;
-  height: 2.3vw;
+  /* width: 85%;
+  height: 2.3vw; */
   margin: 0.43vw;
   background-color: #f2fbec;
   box-shadow: 0vw 0.211vw 0.36vw grey;
   border: none;
   padding: 1.09vw;
   margin-bottom: 1.3vw;
-}
-button {
+}button {
   width: 4.3vw;
   height: 3.6vw;
   margin: 0.331vw;
@@ -65,6 +64,7 @@ button:active {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 @media only screen and (max-width: 600px) {
   * {
     font-size: 2.1vw;

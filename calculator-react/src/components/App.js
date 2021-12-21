@@ -2,7 +2,7 @@ import Keyboard from "./Keyboard";
 import { connect } from "react-redux";
 import React, { useEffect } from "react";
 import { display, compute, clearScreen } from "../Reducer/reducer";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/index.css";
 import MyNavbar from "./Navbar";
@@ -26,7 +26,7 @@ const App = (props) => {
       // unsubscribe event
       document.removeEventListener("keydown", _keyDown);
     };
-  }, []);
+  }, );
   const fetch = () => {
     const buttons = document.querySelectorAll("button");
     handleButtons(buttons);

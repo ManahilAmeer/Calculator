@@ -1,17 +1,9 @@
 import React, { useEffect } from "react";
 import "../style/Recent.css";
 import {
-  Nav,
-  Navbar,
-  Container,
   ListGroup,
-  Card,
-  Button,
 } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import MyNavbar from "../components/Navbar";
-import { Link, Outlet } from "react-router-dom";
-import { connect } from "react-redux";
 import { pre } from "../Reducer/reducer";
 // import { ViewRecent } from "../Reducer/reducer";
 // const mapStateToProps = (state) => {
@@ -41,7 +33,8 @@ function Recent(props) {
         <MyNavbar></MyNavbar>
         <ListGroup variant="flush">
           {pre.map((item, index) => {
-            if(!pre.length){
+            if(pre.length===0){
+              console.log("Len: ",pre.length);
               return (
                 <>
                   <ListGroup.Item>
@@ -51,7 +44,7 @@ function Recent(props) {
                 </>
               );
             }
-            if(pre.length){
+            else{
               return (
                 // alert("asa")
                 <ListGroup.Item as="li" className="item">

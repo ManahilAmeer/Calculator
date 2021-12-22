@@ -7,7 +7,7 @@ const CalculatoReducer = createSlice({
   reducers: {
     display: (state, action) => {
       let res = state;
-      // console.log("previuos: ", state);
+      
       res = res + action.payload;
       return res;
     },
@@ -22,18 +22,18 @@ const CalculatoReducer = createSlice({
         try {
           output = eval(state);
           let prev = { output, state };
-          // state = output;
-          // previous=Object.assign([],previous);
+          
+          
           previous.push(prev);
         } catch (e) {
           output = "Math Error";
           CalculatoReducer.caseReducers.clearScreen();
         }
       }
-      // let prev = { output,state };
+      
       state = output;
-      // // previous=Object.assign([],previous);
-      // previous.push(prev);
+      
+      
       console.log("previous: ", previous);
       return state ;
     },
@@ -41,9 +41,9 @@ const CalculatoReducer = createSlice({
       state = "";
       return state;
     },
-    // ViewRecent:()=>{
-    //   return previous;
-    // }
+    
+    
+    
   },
 });
 

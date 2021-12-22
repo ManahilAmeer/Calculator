@@ -22,11 +22,10 @@ const App = (props) => {
   useEffect(() => {
     document.addEventListener("keydown", _keyDown);
     fetch();
-    return () => {
-      // unsubscribe event
+    return () =>{
       document.removeEventListener("keydown", _keyDown);
     };
-  }, );
+  },[] );
   const fetch = () => {
     const buttons = document.querySelectorAll("button");
     handleButtons(buttons);
@@ -36,7 +35,7 @@ const App = (props) => {
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener("click", (ev) => {
         if (buttons[i].textContent === "=") {
-          // console.log("c")
+          
           props.compute();
         }
         if (buttons[i].textContent === "C") {

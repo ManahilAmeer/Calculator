@@ -1,5 +1,5 @@
 import { LinkContainer } from "react-router-bootstrap";
-import { Nav, Button, Navbar, Container } from "react-bootstrap";
+import {  Nav, Button, Navbar, Container } from "react-bootstrap";
 import logo from "../components/logo.jpg"
 const MyNavbar = () => {
   return (
@@ -11,7 +11,6 @@ const MyNavbar = () => {
         <LinkContainer to="/">
           <Button>About</Button>
         </LinkContainer>
-        {/* <LinkContainer to="/about">About</LinkContainer> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -23,9 +22,6 @@ const MyNavbar = () => {
             <LinkContainer to="/recents">
               <Button>Recent</Button>
             </LinkContainer>
-            {/* <Link to="/">Calculator</Link> */}
-            {/* <Link to="/recents">Recents</Link>
-              <Link to="/expenses">Expenses</Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
